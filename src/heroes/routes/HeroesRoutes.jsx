@@ -1,6 +1,5 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import { NotHeroe } from "../../ui/components";
 import { Navbar } from "../../ui/components/NavBar";
 import { Home, Heroes, Search, Hero } from "../pages/index";
 
