@@ -1,0 +1,65 @@
+.home-left-style{
+    height: 85vh;
+}
+
+.btn-home{
+    background-color: transparent;
+    color: #430B04;
+    border: 1px solid #430B04;
+    border-radius: 20px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 2rem;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    
+}
+
+.btn-home:hover{
+    background-color: #41201c;
+    color: #fff;
+}
+
+.text-home{
+    font-weight: 600;
+    color: gray;
+    margin-top: 2rem;
+}
+
+.login-container{
+    height: 80vh;
+    margin-top: 4.5%;
+}
+
+.container-mini{
+    margin-right: 10px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.btn-back{
+    background-color: transparent;
+    border: none;
+}
+
+.card-size{
+    width: 260px;
+    
+}
+
+.container-img{
+    width: 258px;
+    height: 170px;
+    margin-left: -12px;
+}
+
+.img-size{
+    width: 100%;
+    height: 100%;
+}
+
+.text-not-found{
+    color: rgb(167, 167, 167);
+}
