@@ -1,9 +1,7 @@
-import { Link } from "react-router-dom";
 import { useHeroe } from "../hooks/useHeroe";
 
-export const HeroCard = ({ name, fullName, url, company, hero }) => {
-  const urlHero = `hero/${hero.id}`;
-  const { setHeroeActual } = useHeroe();
+export const HeroCard = ({ name, fullName, url, company, heroe }) => {
+
   return (
     <>
       <div className="card card-size mb-2 mx-2 shadow col-3">
@@ -17,11 +15,9 @@ export const HeroCard = ({ name, fullName, url, company, hero }) => {
               {fullName != "" ? fullName : "Name not available"} | {company}
             </span>
           </p>
-          <Link to={urlHero}>
-            <button onClick={setHeroeActual(hero)} className="btn btn-primary">
+            <button  className="btn btn-primary">
               More
             </button>
-          </Link>
         </div>
       </div>
     </>

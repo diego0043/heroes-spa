@@ -12,7 +12,7 @@ export const HeroesList = ({ heroes }) => {
               fullName={heroe.biography.fullName}
               url={heroe.images.sm}
               company={heroe.biography.publisher}
-              hero={heroe}
+              heroe={heroe}
             />
           );
         })}
