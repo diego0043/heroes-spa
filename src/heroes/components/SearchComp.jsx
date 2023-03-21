@@ -43,7 +43,6 @@ export const SearchComp = () => {
             </div>
           </div>
         </div>
-        <div>{heroes.length}</div>
         <div className="container">
           {heroes.length > 0 ? <HeroesList heroes={heroes} /> : null}
         </div>

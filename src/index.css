@@ -63,3 +63,17 @@
 .text-not-found{
     color: rgb(167, 167, 167);
 }
+
+::-webkit-scrollbar {
+    width: 0.5rem;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}   
+
+::-webkit-scrollbar-thumb {
+    background: #b3b3b3;
+    border-radius: 20px;
+
+}

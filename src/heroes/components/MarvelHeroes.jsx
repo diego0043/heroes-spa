@@ -8,10 +8,12 @@ export const MarvelHeroes = () => {
 
   const handleNextPage = () => {
     setPage(page + 12);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   const handlePrevPage = () => {
     page > 0 ? setPage(page - 12) : setPage(0);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   const getAllHeroes = async () => {

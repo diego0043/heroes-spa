@@ -1,6 +1,8 @@
+import { Link } from "react-router-dom";
 import { useHeroe } from "../hooks/useHeroe";
 
 export const HeroCard = ({ name, fullName, url, company, heroe }) => {
+  const urlHeroe = "/search/" + name + "/" + heroe.id;
 
   return (
     <>
@@ -15,9 +17,9 @@ export const HeroCard = ({ name, fullName, url, company, heroe }) => {
               {fullName != "" ? fullName : "Name not available"} | {company}
             </span>
           </p>
-            <button  className="btn btn-primary">
-              More
-            </button>
+          <Link to={urlHeroe}>
+            <button className="btn btn-primary">More</button>
+          </Link>
         </div>
       </div>
     </>
