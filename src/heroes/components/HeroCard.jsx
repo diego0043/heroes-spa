@@ -2,7 +2,12 @@ import { Link } from "react-router-dom";
 import { useHeroe } from "../hooks/useHeroe";
 
 export const HeroCard = ({ name, fullName, url, company, heroe }) => {
-  const urlHeroe = "/search/" + name + "/" + heroe.id;
+  let urlHeroe = "";
+  try {
+    urlHeroe = "/hero/" + name + "-" + heroe.id;
+  } catch (error) {
+    console.log(error);
+  }
 
   return (
     <>

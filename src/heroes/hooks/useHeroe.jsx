@@ -13,12 +13,11 @@ export const useHeroe = () => {
     setData(newData);
   };
 
-  // ! Falta optimizar para no hacer una nueva petición si ya se tiene el heroe en el state
-  const getHeroe = async (name) => {
-    const url = `https://superheroapi.com/api/3464617987144506/search/batman`;
+  const getHeroe = async (id) => {
+    const url = `https://akabab.github.io/superhero-api/api/id/${id}.json?limit=10&skip=0`;
     const resp = await axios.get(url);
-    const newHeroe = resp.data.results[0];
-    setHeroe(...heroe, newHeroe);
+    const newData = resp.data;
+    setHeroe(newData);
   };
 
   const getHeroes = async (name) => {

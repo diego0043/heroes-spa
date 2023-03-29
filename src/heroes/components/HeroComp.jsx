@@ -1,21 +1,13 @@
+import { useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { useHeroe } from "../hooks/useHeroe";
-
+import { HeroDetail } from "./HeroDetail";
 
 export const HeroComp = () => {
-  const heroId = useParams();
-  const { hero } = useHeroe();
-
-
+  const { heroeId } = useParams();
+  const id = heroeId.split("-").pop();
   return (
     <>
-      <div className="container flex justify-content-center">
-        <div className="row">
-          <div className="col-12">
-            {heroId}
-          </div>
-        </div>
-      </div>
+      <HeroDetail id={id} />
     </>
   );
 };

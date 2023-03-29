@@ -15,7 +15,7 @@ export const NotHeroe = () => {
       />
     </Player>
     <h2 className="text-center text-not-found">
-        <span className="text-uppercase">Page not found</span>
+        <span className="text-uppercase">Hero not found</span>
     </h2>
     </>
   );
