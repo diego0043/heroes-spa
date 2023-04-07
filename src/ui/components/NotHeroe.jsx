@@ -7,7 +7,7 @@ export const NotHeroe = () => {
       autoplay
       loop
       src="https://assets8.lottiefiles.com/private_files/lf30_zncbuxbi.json"
-      style={{ height: "500px", width: "500px" }}
+      style={{ height: "400px", width: "400px" }}
     >
       <Controls
         visible={false}

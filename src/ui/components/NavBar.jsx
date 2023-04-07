@@ -14,8 +14,21 @@ export const Navbar = () => {
       <Link className="navbar-brand ms-5" to="/">
         <img className="" src={img} alt="" />
       </Link>
-
-      <div className="navbar-collapse me-5 d-flex d-flex flex-row-reverse">
+      <button
+        className="me-3 btn-nav"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span className="navbar-toggler-icon icon-nav"></span>
+      </button>
+      <div
+        className="navbar-collapse me-5 d-flex d-flex flex-row-reverse"
+        id="navbarSupportedContent"
+      >
         <div className="navbar-nav">
           <NavLink
             className={({ isActive }) =>

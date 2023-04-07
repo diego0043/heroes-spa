@@ -11,7 +11,7 @@ export const HeroCard = ({ name, fullName, url, company, heroe }) => {
 
   return (
     <>
-      <div className="card card-size mb-2 mx-2 shadow col-3">
+      <div className="card card-size mb-2 mx-2 shadow col-3 animate__animated animate__fadeIn">
         <div className="container-img">
           <img height="200px" src={url} className="card-img-top img-size" />
         </div>

@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
 import { useHeroe } from "../hooks/useHeroe";
 import { HeroesList } from "./HeroesList";
+import { NotHeroe } from "../../ui/components/NotHeroe";
 
 export const SearchComp = () => {
   const [hero, setHero] = useState("");
   const { heroes, getHeroes, getData, data } = useHeroe();
+  const  [checkSearch, setCheckSearch] = useState(false)
 
   const handleInputChange = (e) => {
     setHero(e.target.value);
@@ -14,8 +16,18 @@ export const SearchComp = () => {
     e.preventDefault();
     if (hero.trim().length > 1) {
       getHeroes(hero);
+      const state = checkLength()
+      setCheckSearch(state)
     } else {
-      alert("Please enter a valid name");
+      // mostraremos modal de boo
+    }
+  };
+
+  const checkLength = () => {
+    if ( heroes.length === 0 ) {
+      return true;
+    } else {
+      return false;
     }
   };
 
@@ -32,7 +44,7 @@ export const SearchComp = () => {
               <form onSubmit={handleShowHero}>
                 <input
                   type="text"
-                  className="form-control shadow-sm"
+                  className="form-control shadow-sm animate__animated animate__bounce"
                   aria-describedby="emailHelp"
                   placeholder="Search Hero"
                   autoComplete="off"
@@ -44,7 +56,7 @@ export const SearchComp = () => {
           </div>
         </div>
         <div className="container">
-          {heroes.length > 0 ? <HeroesList heroes={heroes} /> : null}
+          {heroes.length > 0  ? <HeroesList heroes={heroes} /> : heroes.length === 0 && checkSearch ? <NotHeroe /> : null}
         </div>
       </div>
     </>

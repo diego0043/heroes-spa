@@ -86,3 +86,23 @@
     justify-content: center;
     margin-top: 4%;
 }
+
+.container-img-detail{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-nav{
+    background-color: transparent;
+    border: none;
+}
+
+.btn-nav:active{
+background-color: transparent !important;
+    border: none !important;
+}
+
+.icon-nav{
+    font-size: 1.3rem;
+}
