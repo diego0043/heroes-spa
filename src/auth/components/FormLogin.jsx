@@ -1,10 +1,13 @@
-import React, { useEffect } from "react";
+import React, { useContext, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { AuthContext } from "../context";
 
 export const FormLogin = () => {
+  const {login } = useContext(AuthContext)
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
+    login("Diego Valencia");
     e.preventDefault();
     navigate("/", {
       replace: true
