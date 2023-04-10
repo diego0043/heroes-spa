@@ -1,17 +1,21 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../context";
 
 export const FormLogin = () => {
-  const {login } = useContext(AuthContext)
+  const { login } = useContext(AuthContext);
   const navigate = useNavigate();
 
+  const [email, setEmail] = useState("");
+
   const handleSubmit = (e) => {
-    login("Diego Valencia");
+    const idRamdom = Math.floor(Math.random() * 1000);
+    const user = { id: idRamdom, name: email.split("@")[0] };
+    login(user);
     e.preventDefault();
-    navigate("/", {
-      replace: true
-    });
+     navigate("/", {
+      replace: true,
+    }); 
   };
 
   return (
@@ -24,6 +28,8 @@ export const FormLogin = () => {
             className="form-control"
             id="exampleInputEmail1"
             aria-describedby="emailHelp"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
             required
           />
           <div id="emailHelp" className="form-text">
